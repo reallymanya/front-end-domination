@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+/*ye boiler plate har baar likhna*/
+
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: #ededed;
+    display: grid;
+   grid-template-columns: 25% 25% 50%;
+   grid-template-rows: 26% 56% 18%;
+}
+
+
+#left-top-left{
+    /* background-color: crimson; */
+    padding: 40px;
+}
+
+#square{
+    height: 25px;
+    width: 25px;
+    background-color: black;
+   rotate: 45deg;
+}
+
+#left-top-right{
+/* background-color: aqua; */
+justify-self: right;
+padding: 40px;
+text-align: right;
+}
+
+#left-top-right  h4{
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#left-top-right  h5{
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#left-top-right h6{
+    display: none;
+}
+
+#left-center{
+    /* background-color: royalblue; */
+    grid-column: 1/3;
+    padding: 40px;
+}
+
+#left-center h1 {
+    font-size: 7vw;
+    line-height: 6.5vw;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#left-center h1:nth-child(2n){
+    text-align: center;
+}
+#left-bottom{
+    /* background-color: chartreuse; */
+     grid-column: 1/3;
+     padding: 40px;
+     font-size: 18px;
+     font-weight: 500;
+     color: #666;
+}
+
+#right{
+    grid-column: 3;
+    grid-row: 1/4;
+    padding: 40px;
+    padding-right: 150px;
+}
+
+#right video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+#arrow{
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    background-color: orangered;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+     
+}
+
+#arrow i{
+    font-size: 40px;
+    font-weight: 100;
+}
+
+/* responsivenss */
+@media(max-width: 600px){
+    #main{
+
+   grid-template-columns: 50% 50%;
+   grid-template-rows: 60px 34% 8%;
+}
+
+#right{
+    grid-column: 1/4;
+    grid-row: 4;
+    padding: 20px;
+    padding-right: 20px;
+}
+
+#left-top-left{
+    /* background-color: crimson; */
+    padding: 20px;
+}
+
+#square{
+    height: 15px;
+    width: 15px;
+
+}
+
+#left-top-right{
+/* background-color: aqua; */
+
+padding: 20px;
+text-align: right;
+
+}
+
+#left-top-right  h4{
+    display: none;
+}
+
+#left-top-right  h5{
+    display: none;
+}
+
+
+#left-center{
+    /* background-color: royalblue; */
+ 
+    padding:  10px 20px;
+}
+
+#left-center h1 {
+    font-size: 15vw;
+    line-height: 12vw;
+
+}
+#left-center h1:nth-child(2n){
+    text-align: right;
+}
+#left-bottom{
+    /* background-color: chartreuse; */
+
+     padding: 5px 20px;
+    
+}
+
+#left bottom p{
+    width: 90%;
+    font-size: 10px;
+}
+#right video{
+    height: 45vh;
+}
+#arrow{
+    
+    top: 54%;
+    left: 50%;
+   padding: 10px;
+   font-size: 20px;
+  transform: translate(-50%,-50%) rotate(90 deg);
+     
+}
+
+#arrow i{
+    font-size: 20px;
+    
+}
+#left-top-right h6{
+    display: initial;
+}
+
+}
