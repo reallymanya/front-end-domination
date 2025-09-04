@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy-Medium', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+   
+}
+
+#nav{
+    height: 80px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+#nav-part1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+.gola{
+height: 22px;
+width: 22px;
+background-color: black;
+border-radius: 50%;
+}
+
+#nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+#nav-part2 h4{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#nav-part2 h4 span{
+    color: rgb(119, 119, 119);
+    margin-left: 25px;
+}
+
+#nav2{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    padding: 0 50px;
+    /* background-color: red; */
+}
+
+#nav2 h3{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#content{
+    height: calc(100% - 150px); /* to calculate the height of the content area */
+    width: 100%;
+    /* background-color: aquamarine; */
+}
+
+#text-content{
+    height: 45%;
+    width: 100%;
+    display: flex;
+    overflow-x: auto; /* allows horizontal scrolling */
+}
+
+#text-content::-webkit-scrollbar {
+    background-color: transparent; /* hides the scrollbar */
+    height: 7px; /* sets the height of the scrollbar */
+}
+#text-content::-webkit-scrollbar-thumb {
+    background-color: orangered; 
+}
+.elem{
+    height: 100%;
+    width: 60%;
+    /* background-color: red; */
+    flex-shrink: 0; /* prevents the element from shrinking */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.elem h1{
+   
+    font-size: 130px;
+    font-family: 'Gilroy-Light', sans-serif;
+   
+}
+
+#image{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    overflow-x: auto; 
+    
+}
+#image::-webkit-scrollbar {
+    background-color: transparent; 
+   
+}
+
+#image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* ensures the image covers the entire area */
+    flex-shrink: 0;
+    
+}
+
