@@ -7,3 +7,6 @@ and 1 major static webpage
 deep understanding of JS basics and DOM manipulation and Async JS in depth 
 
 // till 06/09/25 
+
+11/9,12/9 - practical JS questions
+
