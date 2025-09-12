@@ -1,0 +1,46 @@
+<!-- create an unordered list. allow users to add and remove list items dynamically using buttom   -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul></ul>
+    <input type="text" placeholder="add new items" />
+    <button id="add">Add</button>
+    <button id="del">Delete</button>
+    <script>
+      let add = document.querySelector("#add");
+      let del = document.querySelector("#del");
+      let input = document.querySelector("input");
+      let ul = document.querySelector("ul");
+
+      let li; // you can use it anywhere
+
+      add.addEventListener("click", function () {
+        if (input.value.trim() === "") {
+        } else {
+          li = document.createElement("li"); // value yaha assign
+          li.textContent = input.value;
+          ul.appendChild(li);
+          input.value = "";
+        }
+      });
+
+      del.addEventListener("click", function () {
+        //  ul.removeChild(li);
+        let items = ul.querySelectorAll("li");
+        for (let i = 0; i < items.length; i++) {
+          if (items[i].textContent === input.value.trim()) {
+            ul.removeChild(items[i]);
+            input.value = ""; // clear input
+            break;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<!-- create a tabbed interface where clicking on tabs displays different content sections without page reload -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Patrick+Hand&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="tabs">
+      <div id="home" class="tab">Home</div>
+      <div id="about" class="tab">About</div>
+      <div id="contact" class="tab">Contact</div>
+    </div>
+    <h3 id="home-text">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
+      laborum cupiditate eaque. Voluptates accusantium necessitatibus ad
+      voluptate vitae dolore ab aut debitis, ea earum accusamus nisi illo
+      suscipit architecto nostrum.
+    </h3>
+    <h3 id="about-text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+      voluptates inventore omnis libero magni exercitationem molestiae suscipit
+      culpa commodi repellat reprehenderit unde nobis soluta optio nostrum, qui
+      expedita, debitis dolor nesciunt mollitia modi, doloremque veritatis
+      eligendi? Eos hic, exercitationem vitae velit et fugiat similique iure.
+      Debitis dicta facilis nam nesciunt.
+    </h3>
+    <h3 id="contact-text">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus,
+      nesciunt exercitationem eligendi vel modi iusto autem cupiditate a
+      perferendis voluptatem rem laboriosam dignissimos quo ea, dolores sunt
+      beatae aspernatur facere quas veniam debitis adipisci suscipit porro. Ex
+      ad recusandae dolores harum sapiente odio. Mollitia beatae quaerat
+      reiciendis corporis nostrum explicabo iusto pariatur ducimus odio at. Quas
+      facilis iusto totam! Dolores atque quos odio culpa nihil ipsum porro
+      adipisci sit, animi cumque omnis doloribus magni voluptates suscipit
+      beatae veritatis, quo vero odit molestiae. Repudiandae, dolor, iusto velit
+      dolores unde numquam, doloremque culpa praesentium quis consectetur quas
+      aperiam quam corporis? Ea fugit quisquam recusandae cupiditate illo quasi,
+      consequuntur adipisci dolor, asperiores tempora et praesentium deserunt,
+      quibusdam dolorem ex unde totam animi veritatis dicta corrupti incidunt!
+      Eveniet nihil a quae sit unde cumque nemo consectetur soluta architecto
+      fuga nisi quaerat, voluptatem, doloremque illo labore minus, repellat
+      omnis. Fugiat minima unde nihil aperiam, tenetur nesciunt et laudantium
+      sint ea. Neque alias accusamus sequi nihil! Accusantium dolorem ipsa
+      aperiam ratione ex cum temporibus dolorum tempore doloremque sunt! Id eum,
+      magni, ea animi aperiam sunt repellat odit asperiores est tenetur ipsam
+      magnam eveniet! Nesciunt ratione sit saepe blanditiis voluptatem deleniti
+      accusantium non, hic nemo mollitia vero iure corporis, nam asperiores.
+      Accusantium minus, voluptate placeat officia officiis quos! Possimus
+      deleniti sint asperiores praesentium fugit voluptatum accusantium
+      laudantium quo consequatur nesciunt vel hic placeat at nostrum perferendis
+      aperiam autem similique reprehenderit, enim amet natus porro vero,
+      doloremque pariatur. Nulla inventore dolorem deleniti vitae reiciendis
+      magni ad, aliquid enim iure modi possimus perferendis repellat quas
+      incidunt doloribus sequi ex corrupti ducimus necessitatibus commodi, error
+      maxime sed. Animi enim fugiat dolorum quam corporis id recusandae illum
+      possimus nam saepe aspernatur quia velit, sapiente natus fuga distinctio
+      ipsam cumque asperiores quas est, tenetur adipisci dolore quaerat.
+      Praesentium tempore at quod porro molestias pariatur, aperiam nisi cum
+      expedita dolore obcaecati autem reiciendis error culpa laudantium est
+      tempora cupiditate. Illo animi numquam assumenda excepturi incidunt, nihil
+      maiores maxime praesentium natus placeat ipsa, aut eligendi impedit quia
+      ducimus molestias inventore laboriosam, nulla repudiandae? Adipisci!
+    </h3>
+    <script>
+      /* let about = document.querySelector("#about");
+      let home = document.querySelector("#home");
+      let contact = document.querySelector("#contact");
+
+      let htext = document.querySelector("#home-text");
+      let atext = document.querySelector("#about-text");
+      let ctext = document.querySelector("#contact-text");*/
+
+      let divs = document.querySelectorAll(".tab");
+      let texts = document.querySelectorAll("h3");
+
+      texts[0].style.display = "block";
+      texts[0].style.width = "50%";
+
+      /*home.addEventListener("click", function () {
+        saaretexthatao();
+        htext.style.display = "block";
+        htext.style.width = "50%";
+      });
+
+      about.addEventListener("click", function () {
+        saaretexthatao();
+        atext.style.display = "block";
+        atext.style.width = "50%";
+      });
+
+      contact.addEventListener("click", function () {
+        saaretexthatao();
+        ctext.style.display = "block";
+        ctext.style.width = "50%";
+      });*/
+
+      divs.forEach(function (div, index) {
+        div.addEventListener("click", function () {
+          saaretexthatao();
+          texts[index].style.display = "block";
+          texts[index].style.width = "50%";
+        });
+      });
+
+      function saaretexthatao() {
+        texts.forEach(function (text) {
+          text.style.display = "none";
+        });
+      }
+    </script>
+  </body>
+</html>

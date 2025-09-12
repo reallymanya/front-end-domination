@@ -1,0 +1,22 @@
+<!-- create an html page with a button, when button clicked, change the text of a paragraph element -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+<body>
+    <button>Click me</button>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+    <script>
+        var btn = document.querySelector("button");
+        var p = document.querySelector("p");
+
+        btn.addEventListener("click", function(){
+            p.textContent = "hey hello";
+        })
+    </script>
+</body>
+</html>

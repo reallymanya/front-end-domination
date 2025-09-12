@@ -1,0 +1,45 @@
+<!-- Build a countdown timer that starts when a button is clicked -->
+<!-- and updates display in real time -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3></h3>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <button id="reset">Reset</button>
+
+    <script>
+      let btn = document.querySelector("#start");
+      let btn2 = document.querySelector("#stop");
+      let btn3 = document.querySelector("#reset");
+      let h3 = document.querySelector("h3");
+
+      let int;
+      let count = 0;
+
+      btn.addEventListener("click", function () {
+         clearInterval(int);   // stop any old interval
+        int = setInterval(function () {
+          h3.textContent = count;
+          count++;
+        }, 1000);
+      });
+
+      btn2.addEventListener("click", function () {
+        clearInterval(int);
+      });
+
+       btn3.addEventListener("click", function () {
+      clearInterval(int);  // stop the counter
+      count = 0;           // reset value
+      h3.textContent = count; // show 0 immediately
+    });
+    </script>
+  </body>
+</html>
